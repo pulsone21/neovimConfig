@@ -96,6 +96,32 @@ return {
 
     -- getting all lsp server which are configuered
     local requiredLsps = require 'jo.plugins.lsp.config.lsps'
+    lspConfig.gopls.setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      root_dir = require('lspconfig/util').root_pattern('go.work', 'go.mod', '.git'),
+      filetypes = { 'go', 'gomod', 'gowork', 'gotempl' },
+      settings = {
+        gopls = {
+          usePlaceholders = true,
+          completeUnimported = true,
+          analyses = {
+            unusedparams = true,
+          },
+          staticcheck = true,
+          hints = {
+            assignVariableTypes = true,
+            compositeLiteralFields = true,
+            compositeLiteralTypes = true,
+            constantValues = true,
+            functionTypeParameters = true,
+            parameterNames = true,
+            rangeVariableTypes = true,
+          },
+          gofumpt = true,
+        },
+      },
+    }
 
     for server, config in pairs(requiredLsps) do
       lspConfig[server].setup {

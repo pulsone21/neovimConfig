@@ -14,19 +14,36 @@ local M = {
     },
   },
 
-  -- golang language server
-  gopls = {
-    filetypes = { 'go', 'gomod', 'gowork', 'gotempl' },
-    settings = {
-      gopls = {
-        analyses = {
-          unusedparams = true,
-        },
-        staticcheck = true,
-        gofumpt = true,
-      },
-    },
-  },
-}
+  -- typescript/Javascript language server
 
+  tsserver = {
+    filetypes = { 'ts', 'js', 'tsx', 'jsx' },
+    settings = {},
+  },
+
+  -- golang language server
+  -- gopls = {
+  --   filetypes = { 'go', 'gomod', 'gowork', 'gotempl' },
+  --   settings = {
+  --     gopls = {
+  --       usePlaceholders = true,
+  --       completeUnimported = true,
+  --       analyses = {
+  --         unusedparams = true,
+  --       },
+  --       staticcheck = true,
+  --       hints = {
+  --         assignVariableTypes = true,
+  --         compositeLiteralFields = true,
+  --         compositeLiteralTypes = true,
+  --         constantValues = true,
+  --         functionTypeParameters = true,
+  --         parameterNames = true,
+  --         rangeVariableTypes = true,
+  --       },
+  --       gofumpt = true,
+  --     },
+  --   },
+  -- },
+}
 return M

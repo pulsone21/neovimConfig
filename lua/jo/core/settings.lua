@@ -5,12 +5,23 @@
 -- Set highlight on search
 vim.o.hlsearch = false
 
+-- Activate relativenumber
+vim.o.relativenumber = true
+
 -- Make line numbers default
 vim.wo.number = true
+
+-- Indentation Settings
+vim.opt.tabstop = 2
+vim.opt.smartindent = true
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
 
+-- disable swap files, they are annoing
+vim.opt.swapfile = false
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`

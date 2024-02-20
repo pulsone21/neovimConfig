@@ -36,6 +36,7 @@ return {
         'gitignore',
         'go',
       },
+
       incremental_selection = {
         enable = true,
         keymaps = {
@@ -45,6 +46,7 @@ return {
           node_decremental = '<M-space>',
         },
       },
+
       textobjects = {
         select = {
           enable = true,
@@ -59,6 +61,7 @@ return {
             ['ic'] = '@class.inner',
           },
         },
+
         move = {
           enable = true,
           set_jumps = true, -- whether to set jumps in the jumplist
@@ -79,6 +82,7 @@ return {
             ['[]'] = '@class.outer',
           },
         },
+
         swap = {
           enable = true,
           swap_next = {
