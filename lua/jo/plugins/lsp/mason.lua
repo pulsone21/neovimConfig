@@ -22,8 +22,6 @@ return {
       },
     }
 
-    print(vim.tbl_keys(requiredLsps))
-
     -- LSPs auto installation
     mLspConf.setup {
       ensure_installed = vim.tbl_keys(requiredLsps),
