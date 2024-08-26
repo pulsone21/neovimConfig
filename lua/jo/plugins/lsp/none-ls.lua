@@ -24,15 +24,13 @@ local M = {
 
       -- setup formatters & linters
       sources = {
-        formatting.gofumpt,
-        formatting.goimports,
+        formatting.gofumpt, -- GO formatter
+        formatting.goimports, -- Go Formatter
         formatting.prettier.with { disabled_filetypes = {} }, -- js/ts formatter
         formatting.stylua, -- lua formatter
-        diagnostics.eslint_d.with { -- js/ts linter
-          condition = function(utils)
-            return utils.root_has_file { '.eslintrc.js', '.eslintrc.cjs' } -- only enable if root has .eslintrc.js or .eslintrc.cjs
-          end,
-        },
+        formatting.black, -- python formatter
+
+        diagnostics.mypy, -- python linter
       },
 
       -- configure format on save

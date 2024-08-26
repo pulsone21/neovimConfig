@@ -14,11 +14,21 @@ local M = {
     },
   },
 
-  -- typescript/Javascript language server
-
-  tsserver = {
-    filetypes = { 'ts', 'js', 'tsx', 'jsx' },
+  sqls = {
+    filetypes = { 'sql' },
     settings = {},
+  },
+
+  -- python lsp
+  pyright = {
+    filetypes = { 'python' },
+    settings = {},
+  },
+
+  -- dockerfiles language server
+  dockerls = {
+    settings = {},
+    filetypes = { 'dockerfile', 'Dockerfile' },
   },
 
   -- golang language server
