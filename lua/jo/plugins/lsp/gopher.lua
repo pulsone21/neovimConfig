@@ -31,17 +31,17 @@ return {
     map('<leader>lgm', ':GoMod %<CR>', '[G]o [M]od [T]idy')
 
     local whichKey = require 'which-key'
-    whichKey.register {
-      ['<leader>l'] = { name = '[L]uange specific functions', _ = 'which_key_ignore' },
-      ['<leader>lg'] = { name = '[G]o functions', _ = 'which_key_ignore' },
-      ['<leader>lgm'] = { name = '[G]o [M]od Tidy', _ = 'which_key_ignore' },
-      ['<leader>lgt'] = { name = '[G]o [T]ag functions', _ = 'which_key_ignore' },
-      ['<leader>lgta'] = { name = '[G]o [T]ag [A]dd', _ = 'which_key_ignore' },
-      ['<leader>lgtr'] = { name = '[G]o [T]ag [R]emove', _ = 'which_key_ignore' },
-      ['<leader>lgtaj'] = { name = '[G]o [T]ag [A]dd [J]son', _ = 'which_key_ignore' },
-      ['<leader>lgtrj'] = { name = '[G]o [T]ag [R]emove [J]son', _ = 'which_key_ignore' },
-      ['<leader>lgtay'] = { name = '[G]o [T]ag [A]dd [Y]aml', _ = 'which_key_ignore' },
-      ['<leader>lgtry'] = { name = '[G]o [T]ag [R]emove [Y]aml', _ = 'which_key_ignore' },
+    whichKey.add {
+      { '<leader>l', name = '[L]uange specific functions', mode = { 'n' } },
+      { '<leader>lg', name = '[G]o functions', mode = { 'n' } },
+      { '<leader>lgm', name = '[G]o [M]od Tidy', mode = { 'n' } },
+      { '<leader>lgt', name = '[G]o [T]ag functions', mode = { 'n' } },
+      { '<leader>lgta', name = '[G]o [T]ag [A]dd', mode = { 'n' } },
+      { '<leader>lgtr', name = '[G]o [T]ag [R]emove', mode = { 'n' } },
+      { '<leader>lgtaj', name = '[G]o [T]ag [A]dd [J]son', mode = { 'n' } },
+      { '<leader>lgtrj', name = '[G]o [T]ag [R]emove [J]son', mode = { 'n' } },
+      { '<leader>lgtay', name = '[G]o [T]ag [A]dd [Y]aml', mode = { 'n' } },
+      { '<leader>lgtry', name = '[G]o [T]ag [R]emove [Y]aml', mode = { 'n' } },
     }
   end,
   build = function()

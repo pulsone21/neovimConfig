@@ -63,21 +63,20 @@ return {
     local whichKey = require 'which-key'
 
     -- register normal mode key chains
-    whichKey.register {
-      ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-      ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-      ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
-      ['<leader>h'] = { name = 'Git [H]unk', _ = 'which_key_ignore' },
-      ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-      ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-      ['<leader>t'] = { name = '[T]oggle', _ = 'which_key_ignore' },
-      ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+    whichKey.add {
+      { '<leader>c', group = '[C]ode' },
+      { '<leader>d', group = '[D]ocument' },
+      { '<leader>g', group = '[G]it' },
+      { '<leader>h', group = 'Git [H]unk' },
+      { '<leader>r', group = '[R]ename' },
+      { '<leader>s', group = '[S]earch' },
+      { '<leader>t', group = '[T]oggle' },
+      { '<leader>w', group = '[W]orkspace' },
     }
 
     -- register visual mode key chains
-    whichKey.register({
-      ['<leader>'] = { name = 'VISUAL <leader>' },
-      ['<leader>h'] = { 'Git [H]unk' },
+    whichKey.add({
+      { '<leader>', name = 'VISUAL <leader>' },
     }, { mode = 'v' })
 
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
@@ -96,6 +95,8 @@ return {
 
     -- getting all lsp server which are configuered
     local requiredLsps = require 'jo.plugins.lsp.config.lsps'
+
+    -- dont know why but added go specific stuff directly here....
     lspConfig.gopls.setup {
       capabilities = capabilities,
       on_attach = on_attach,
