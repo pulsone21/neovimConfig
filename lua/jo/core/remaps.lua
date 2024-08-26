@@ -15,7 +15,27 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Personal Keymaps
-vim.keymap.set('n', '<leader>cf',vim.cmd.Ex, {desc = '[C]lose [F]ile'})
+vim.keymap.set('n', '<leader>cf', vim.cmd.Ex, { desc = '[C]lose [F]ile' })
+
+-- Better netrw commands
+vim.api.nvim_create_autocmd('filetype', {
+  pattern = 'netrw',
+  desc = 'Better mappings for netrw',
+  callback = function()
+    local bind = function(lhs, rhs)
+      vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
+    end
+
+    -- edit new file
+    bind('<leader>fn', '%')
+
+    -- rename file
+    bind('<leader>fr', 'R')
+
+    -- delete file
+    bind('<leader>fd', 'D')
+  end,
+})
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
