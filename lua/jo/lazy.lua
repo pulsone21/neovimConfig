@@ -10,11 +10,7 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath)
-
 require('lazy').setup({ { import = 'jo.plugins' }, { import = 'jo.plugins.lsp' } }, {
-  install = {
-    colorscheme = { 'nightfly' },
-  },
   checker = {
     enabled = true,
     notify = false,
