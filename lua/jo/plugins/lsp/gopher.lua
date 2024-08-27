@@ -32,10 +32,10 @@ return {
 
     local whichKey = require 'which-key'
     whichKey.add {
-      { '<leader>l', name = '[L]uange specific functions', mode = { 'n' } },
-      { '<leader>lg', name = '[G]o functions', mode = { 'n' } },
+      { '<leader>l', group = '[L]uange specific functions', mode = { 'n' } },
+      { '<leader>lg', group = '[G]o functions', mode = { 'n' } },
       { '<leader>lgm', name = '[G]o [M]od Tidy', mode = { 'n' } },
-      { '<leader>lgt', name = '[G]o [T]ag functions', mode = { 'n' } },
+      { '<leader>lgt', group = '[G]o [T]ag functions', mode = { 'n' } },
       { '<leader>lgta', name = '[G]o [T]ag [A]dd', mode = { 'n' } },
       { '<leader>lgtr', name = '[G]o [T]ag [R]emove', mode = { 'n' } },
       { '<leader>lgtaj', name = '[G]o [T]ag [A]dd [J]son', mode = { 'n' } },
