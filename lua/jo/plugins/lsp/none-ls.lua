@@ -29,8 +29,6 @@ local M = {
         formatting.prettier.with { disabled_filetypes = {} }, -- js/ts formatter
         formatting.stylua, -- lua formatter
         formatting.black, -- python formatter
-
-        diagnostics.mypy, -- python linter
       },
 
       -- configure format on save
