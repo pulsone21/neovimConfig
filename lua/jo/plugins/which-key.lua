@@ -7,6 +7,7 @@ return {
   end,
   opts = {
     -- your configuration comes here
+    -- TODO: Add default groups in here
     -- there are some configs in "./lsp/lspconfig.lua" defined
   },
 }

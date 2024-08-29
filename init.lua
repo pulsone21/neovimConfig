@@ -4,5 +4,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require("jo.core")
-require("jo.lazy")
+require 'jo.core'
+require 'jo.lazy'
+
+local wK = require 'which-key'
+
+wK.add {
+  { '<leader>f', group = '[F]ile', icon = '' },
+}

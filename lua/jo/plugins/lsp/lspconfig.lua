@@ -72,6 +72,7 @@ return {
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>w', group = '[W]orkspace' },
+      { '<leader>l', group = '[L]sp' },
     }
 
     -- register visual mode key chains

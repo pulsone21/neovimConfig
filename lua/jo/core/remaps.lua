@@ -25,17 +25,15 @@ vim.api.nvim_create_autocmd('filetype', {
     local bind = function(lhs, rhs)
       vim.keymap.set('n', lhs, rhs, { remap = true, buffer = true })
     end
-
     -- edit new file
     bind('<leader>fn', '%')
-
     -- rename file
     bind('<leader>fr', 'R')
-
     -- delete file
     bind('<leader>fd', 'D')
   end,
 })
+
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
