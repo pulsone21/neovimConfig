@@ -31,9 +31,10 @@ vim.api.nvim_create_autocmd('filetype', {
     bind('<leader>fr', 'R')
     -- delete file
     bind('<leader>fd', 'D')
+    -- create dir
+    bind('<leader>fc', 'd')
   end,
 })
-
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
