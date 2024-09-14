@@ -14,8 +14,15 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+local saveAndClose = function()
+  -- only save if buffer has been modified
+  if vim.bo.modified and not vim.bo.readonly and vim.fn.expand '%' ~= '' and vim.bo.buftype == '' then
+    vim.api.nvim_command 'silent update'
+  end
+  vim.cmd.Ex()
+end
 -- Personal Keymaps
-vim.keymap.set('n', '<leader>cf', vim.cmd.Ex, { desc = '[C]lose [F]ile' })
+vim.keymap.set('n', '<leader>cf', saveAndClose, { desc = '[C]lose [F]ile' })
 
 -- Better netrw commands
 vim.api.nvim_create_autocmd('filetype', {
