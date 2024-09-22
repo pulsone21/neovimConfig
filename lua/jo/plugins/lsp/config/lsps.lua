@@ -31,6 +31,26 @@ local M = {
     filetypes = { 'dockerfile', 'Dockerfile' },
   },
 
+  cssls = {
+    cmd = { 'vscode-css-language-server', '--stdio' },
+    filetypes = { 'css', 'scss', 'less' },
+    settings = {},
+  },
+
+  templ = {
+    filetypes = { 'templ', 'go', 'html' },
+    settings = {},
+  },
+
+  htmx = {
+    filetypes = { 'go', 'html', 'templ' },
+    settings = {},
+  },
+
+  html = {
+    filetypes = { 'html', 'templ' },
+    settings = {},
+  },
   -- golang language server
   -- gopls = {
   --   filetypes = { 'go', 'gomod', 'gowork', 'gotempl' },
