@@ -77,7 +77,8 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
-    vim.keymap.set('n', '<leader>sc', ':TodoTelescope<cr>', { desc = '[S]earch [C]omments' })
+    vim.keymap.set('n', '<leader>st', ':TodoTelescope keywords=TODO,FIX,HACK<cr>', { desc = '[S]earch [T]odo-Comments - only TODO,FIX,HACK' })
+    vim.keymap.set('n', '<leader>sc', ':TodoTelescope<cr>', { desc = '[S]earch Todo-[C]omments - all' })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()

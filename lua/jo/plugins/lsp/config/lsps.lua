@@ -32,9 +32,11 @@ local M = {
   },
 
   cssls = {
-    cmd = { 'vscode-css-language-server', '--stdio' },
-    filetypes = { 'css', 'scss', 'less' },
-    settings = {},
+    filetypes = { 'css', 'templ' },
+  },
+
+  tailwindcss = {
+    filetypes = { 'css', 'html', 'templ' },
   },
 
   templ = {
@@ -44,6 +46,11 @@ local M = {
 
   htmx = {
     filetypes = { 'go', 'html', 'templ' },
+    settings = {},
+  },
+
+  ts_ls = {
+    filetypes = { 'html', 'js', 'ts', 'templ' },
     settings = {},
   },
 

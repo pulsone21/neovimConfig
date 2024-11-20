@@ -15,6 +15,9 @@ return {
 
     -- visual improvements
     'onsails/lspkind.nvim',
+
+    -- tailwind improvements
+    { 'roobert/tailwindcss-colorizer-cmp.nvim', config = true },
   },
   config = function()
     local cmp = require 'cmp'
