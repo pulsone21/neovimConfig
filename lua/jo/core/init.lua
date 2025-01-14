@@ -1,2 +1,2 @@
-require("jo.core.remaps")
-require("jo.core.settings")
+require 'jo.core.remaps'
+require 'jo.core.settings'

@@ -35,6 +35,7 @@ return {
         'dockerfile',
         'gitignore',
         'go',
+        'templ',
       },
 
       incremental_selection = {

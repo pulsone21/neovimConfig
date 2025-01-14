@@ -21,8 +21,10 @@ local saveAndClose = function()
   end
   vim.cmd.Ex()
 end
+
 -- Personal Keymaps
 vim.keymap.set('n', '<leader>cf', saveAndClose, { desc = '[C]lose [F]ile' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ch', ':nohlsearch<CR>', { desc = '[C]ode no [H]ighlight' })
 
 -- Better netrw commands
 vim.api.nvim_create_autocmd('filetype', {
@@ -40,6 +42,7 @@ vim.api.nvim_create_autocmd('filetype', {
     bind('<leader>fd', 'D')
     -- create dir
     bind('<leader>fc', 'd')
+    -- TODO: Add a command for changing the filetype
   end,
 })
 
